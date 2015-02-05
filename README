@@ -1,0 +1,14 @@
+Companion block to the TimeTracker block.
+
+For admins of a category. can only be added by an admin.
+
+
+For logging to work properly, need to add both timetracker and timetracker_admin to case
+statement in course/lib.php ~ lines 114 like this:
+
+case 'timetracker':
+    $url = "/blocks/timetracker/$url";
+    break;
+case 'timetracker_admin':
+    $url = "/blocks/timetracker_admin/$url";
+    break;
